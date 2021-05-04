@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diving club | Welcome</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <section class="home">
+      <header>
+        <div class="menu-icon" onclick="switchMenu()"></div>
+        <div class="logo">Logo</div>
+      </header>
+      <video src="./video/scuba.mp4" autoplay muted loop></video>
+      <div class="vid-layer"></div>
+      <div class="text">
+        <h2>Diving club</h2>
+        <h3>Join our team. Learn to dive!</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+          porro cupiditate expedita quas, aspernatur illo molestias ad, sed, ab
+          labore hic exercitationem ratione at cum pariatur accusantium atque
+          fuga reprehenderit!
+        </p>
+        <a href="#about">Learn More</a>
+      </div>
+    </section>
+
+    <script>
+      function switchMenu() {
+        var menu = document.querySelector(".menu-icon");
+        var section = document.querySelector(".home");
+        menu.classList.toggle("active");
+        section.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

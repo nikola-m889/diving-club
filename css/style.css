@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 70px;
+  display: flex;
+  left: 0;
+  justify-content: flex-start;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+}
+
+section.active {
+  position: absolute;
+  left: 250px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.6em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.menu-icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin-right: 40px;
+  background: url("../img/res-menu.png");
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.menu-icon.active {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: url("../img/res-close.png");
+  background-size: 27px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vid-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(228, 152, 52, 0.555);
+  mix-blend-mode: overlay;
+}
+
+section .text {
+  position: relative;
+  z-index: 10;
+}
+
+.text h2 {
+  font-size: 6em;
+  font-weight: 700;
+  color: rgb(59, 235, 191);
+  line-height: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+.text h3 {
+  font-size: 3em;
+  font-weight: 700;
+  color: rgb(250, 245, 245);
+  line-height: 0.4em;
+}
+
+.text p {
+  font-size: 22px;
+  color: #fff;
+  margin: 24px 0;
+  max-width: 700px;
+}
+
+.text a {
+  font-size: 1.2em;
+  background: rgba(59, 235, 191, 0.753);
+  padding: 9px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../img/divingmenu.jpg");
+  background-size: cover;
+}
+
+.menu ul {
+  position: relative;
+}
+
+.menu ul li {
+  margin: 20px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.menu ul li a {
+  color: rgb(245, 245, 245);
+  text-decoration: none;
+  font-size: 26px;
+}
