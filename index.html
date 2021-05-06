@@ -8,19 +8,18 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="menu">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#home">Home</a></li>
-      </ul>
-    </div>
+   
     <section class="home">
-      <header>
+      <header id="header">
+        <div class="logo"><img src="./img/diving-logo.png" alt="" /></div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#training">Training</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
         <div class="menu-icon" onclick="switchMenu()"></div>
-        <div class="logo">Logo</div>
       </header>
       <video src="./video/scuba.mp4" autoplay muted loop></video>
       <div class="vid-layer"></div>
@@ -39,12 +38,8 @@
 
     <script>
       function switchMenu() {
-        var menu = document.querySelector(".menu-icon");
-        var section = document.querySelector(".home");
-        var menufull = document.querySelector(".menu");
-        menu.classList.toggle("active");
-        section.classList.toggle("active");
-        menufull.classList.toggle("active");
+        var header = document.querySelector("header");
+        header.classList.toggle("active");
       }
     </script>
   </body>
