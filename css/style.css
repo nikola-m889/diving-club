@@ -21,21 +21,8 @@ section {
   transition: 0.5s;
 }
 
-section.active {
-  position: absolute;
-  left: 250px;
-  width: 100%;
-  min-height: 100vh;
-  padding: 100px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background: #111;
-  transition: 0.5s;
-}
-
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -43,7 +30,28 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-color: rgba(17, 17, 17, 0.575);
+  height: 70px;
   z-index: 1000;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  margin-right: 80px;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 45px;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(59, 235, 191);
+  cursor: pointer;
 }
 
 .logo {
@@ -51,6 +59,13 @@ header {
   font-size: 1.6em;
   font-weight: 500;
   text-transform: uppercase;
+  float: left; 
+  cursor: pointer; 
+}
+
+.logo img {
+  float: left;
+  margin-top: 32px;
 }
 
 .menu-icon {
@@ -64,6 +79,9 @@ header {
   background-position: center;
   cursor: pointer;
   transition: ease-in-out 0.2s;
+  float: right; 
+  display: none; 
+  
 }
 
 .menu-icon.active {
@@ -107,6 +125,7 @@ section .text {
   color: rgb(59, 235, 191);
   line-height: 0.4em;
   margin-bottom: 0.5em;
+  transition: 0.5s; 
 }
 
 .text h3 {
@@ -114,6 +133,7 @@ section .text {
   font-weight: 700;
   color: rgb(250, 245, 245);
   line-height: 0.4em;
+  transition: 0.5s;
 }
 
 .text p {
@@ -133,31 +153,55 @@ section .text {
   font-weight: 500;
 }
 
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url("../img/divingmenu.jpg");
-  background-size: cover;
+@media (max-width: 997px) {
+  .menu-icon {
+    display: block;
+  }
+
+  header ul {
+    position: absolute;
+    top: -100%;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: calc(100vh - 70px);
+    padding: 50px 70px;
+    text-align: center;
+    overflow: auto;
+    background-color: rgba(17, 17, 17, 0.87);
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: 0.5s;
+  }
+
+  header li {
+    margin-bottom: 30px;
+  }
+
+  header li:first-child {
+    margin-top: 15vh;
+  }
+
+  header ul li a {
+    font-size: 27px;
+  }
+
+  header.active {
+    background-color: rgba(17, 17, 17, 0.87);
+  }
+
+  header.active ul {
+    top: 70px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .text h2 {
+    line-height: 0.8em;
+  }
+  .text h3 {
+    line-height: 1.1em;
+  }
 }
 
-.menu ul {
-  position: relative;
-}
-
-.menu ul li {
-  margin: 20px 0;
-  list-style: none;
-  text-align: center;
-}
-
-.menu ul li a {
-  color: rgb(245, 245, 245);
-  text-decoration: none;
-  font-size: 26px;
-}
