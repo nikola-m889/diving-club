@@ -376,6 +376,182 @@ section#instructors h3 {
   font-size: 18px;
 }
 
+section#contact {
+  padding-top: 20px;
+  text-align: center;
+  background: url("../img/contact.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section#contact h3 {
+  width: 100%;
+  padding: 50px 0;
+  font-size: 49px;
+  text-transform: uppercase;
+}
+
+.c-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-col-1 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-col-2 {
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  position: relative;
+  width: 420px;
+  min-height: 400px;
+  text-align: left;
+  margin-left: 50px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 45px rgba(59, 235, 191, 0.1);
+  border: 2px solid rgba(59, 235, 191, 0.3);
+  border-right: 1px solid rgba(59, 235, 191, 0.2);
+  border-bottom: 1px solid rgba(59, 235, 191, 0.2);
+}
+
+.form h2 {
+  position: relative;
+  color: rgb(59, 235, 191);
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+form {
+  width: 300px;
+}
+
+form h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background: rgb(59, 235, 191);
+}
+
+.form .input-place {
+  width: 100%;
+  margin-top: 22px;
+}
+
+.form .input-place label {
+  color: rgb(59, 235, 191);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.form .input-place input,
+textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+  padding: 12px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1xp solid rgba(255, 255, 255, 0.2);
+}
+
+textarea {
+  height: 130px;
+}
+
+form button {
+  background: rgb(59, 235, 191);
+  color: #111;
+  margin-top: 15px;
+  padding: 12px 10px;
+  width: 120px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.offers {
+  width: 100%;
+  min-height: 300px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  float: left;
+}
+
+.offers .ul-offers {
+  padding-top: 0px;
+  text-align: left;
+}
+
+.offers .ul-offers li {
+  position: relative;
+  margin: 10px 0;
+  list-style: none;
+  width: 100%;
+}
+
+.ul-offers li p {
+  margin-left: 80px;
+  color: rgb(59, 235, 191);
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 2.6em;
+}
+
+.ul-offers li::before {
+  content: " ";
+  position: absolute;
+  margin-top: 27px;
+  top: 2px;
+  left: 42px;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(59, 235, 191);
+}
+
+.ul-offers li::after {
+  content: " ";
+  position: absolute;
+  margin-top: 27px;
+  top: 7px;
+  left: 47px;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(59, 235, 191);
+}
+
 @media (max-width: 1200px) {
   .about-left-license {
     width: 30%;
@@ -408,6 +584,25 @@ section#instructors h3 {
 }
     .ins-col {
     max-width: 50%;
+  }
+  
+  .c-col-1,
+  .c-col-2 {
+    width: 100%;
+    margin-left: auto;
+    float: none;
+    padding-bottom: 45px;
+  }
+  .contact {
+    float: none;
+    margin: auto;
+  }
+
+  .offers {
+    display: flex;
+    justify-content: center;
+    float: none;
+    margin: auto;
   }
 }
 
