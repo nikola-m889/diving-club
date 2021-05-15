@@ -11,7 +11,7 @@
   line-height: 1.5em; /* novo */
 }
 
-section.home {
+section#home {
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -52,7 +52,7 @@ header ul li {
 header ul li a {
   text-decoration: none;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   color: rgb(59, 235, 191);
   cursor: pointer;
 }
@@ -154,6 +154,11 @@ section .text {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
+}
+
+.text a:hover {
+  background-color: rgb(59, 235, 191);
+  color: rgb(32, 25, 25);
 }
 
 section {
@@ -624,7 +629,21 @@ form button {
     text-align: center;
     width: 100%;
   }
+  
+   .about-right-license {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-right-license img {
+    max-width: 90%;
+    max-height: 90%;
+  }
 
+  .text {
+    text-align: center;
+  }
+  
   .text h2 {
     font-size: 4em;
     text-align: center;
@@ -654,6 +673,7 @@ form button {
     opacity: 0;
     transform: translateY(-100%);
     transition: 0.5s;
+    display: none;
   }
 
   header li {
@@ -676,6 +696,7 @@ form button {
     top: 70px;
     opacity: 1;
     transform: translateY(0);
+    display: block;
   }
 
   .text h2 {
@@ -705,6 +726,11 @@ form button {
     width: 206px;
     height: 179px;
   }
+  
+  .ptext h3,
+  section#instructors h3 {
+    font-size: 39px;
+  }
 }
 
 @media (max-width: 670px) {
@@ -715,12 +741,53 @@ form button {
   }
   
     .courses-column {
-    max-width: 100%;
+    max-width: 80%;
   }
   
     .ins-col {
     max-width: 100%;
     padding: 30px 0;
+  }
+  
+   .contact {
+    width: 90%;
+    padding: 40px 0;
+  }
+  
+  form button {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .ul-offers li p {
+    margin-left: 80px;
+    color: rgb(59, 235, 191);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 2.6em;
+  }
+  
+  .ul-offers li::before {
+    content: " ";
+    position: absolute;
+    margin-top: 22px;
+    top: 2px;
+    left: 22px;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(59, 235, 191);
+  }
+  
+  .ul-offers li::after {
+    content: " ";
+    position: absolute;
+    margin-top: 22px;
+    top: 7px;
+    left: 27px;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(59, 235, 191);
   }
 }
 
